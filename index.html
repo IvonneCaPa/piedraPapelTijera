@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Piedra Papel Tijera</title>
 </head>
 <body>
     <main>
-        <h1>Piedra Papel Tijeras</h1>
-        <section>
+        <section class="container">
             <form action="#" method="get"></form>
-            <legend>Vamos a Jugar</legend>
-            
-            
+            <h1>PIEDRA, PAPEL, TIJERAS</h1>
+            <div> 
+                <input type="button" value="INTRODUCE TU NOMBRE">
+                <label for="nombre"></label>
+            </div>
+            <div class="containerGame">
+                <input type="radio" name="game" id="piedra">
+                <label for="piedra">✊🏽</label>
+                <input type="radio" name="game" id="papel">
+                <label for="papel">✋🏽</label>
+                <input type="radio" name="game" id="tijeras">
+                <label for="tijeras">🖖🏽</label>
+            </div>
+            <div>
+                <button onclick="game()">¡ JUGAR !</button>
+            </div>          
 
 
         </section>

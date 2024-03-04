@@ -1,0 +1,43 @@
+/* Los atributos para toda la pagina */
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* atributos del main para centrar todo */
+main{
+    display: flex;  /* lo hago flex */
+    justify-content: center; /* alineo al centro horizontalmente*/
+    align-items: center; /* alineo al centro verticalmente*/
+    height: 100vh; /* la altura es  el 100% del alto de la ventana del navegador */
+}
+
+/* atributos del H1 */
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*atributos del contenedor que tiene el formulario*/
+.container {
+    width: 400px;  /* ancho del formulario */
+    height: 400px; /* alto del formulario */
+    margin:100px auto; /* centra el formulario a la pagina*/
+    border: 4px solid black; /* el borde del formulario */
+    border-radius: 6px; /* borde redondeado */
+    display: flex; /* se vuelve flex*/
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+button{
+    width: 300px;
+
+
+    background-color: red;
+}

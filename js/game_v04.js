@@ -1,40 +1,30 @@
 // JUEGO PIEDRA PAPEL O TIJERA
 /** Version 0.4
- * Hacemos un formulario yponemos bonito el juego
+ * Hacemos un formulario y ponemos bonito el juego
  * 
 */
-
-//codigo de control
 let reinicio = true;
 let victorias = 0
 let perdidas = 0
 let empate = 0
 
-do {
-    game()
-    //hacemos el confirm para que pare un poco
-    reinicio = confirm("quieres seguir jugando?")
-    if (!reinicio){
-        break;
-    }
-} while (reinicio);
+
+let game = document.getElementByName("game")
+
+
+
 
 
 function game(){
-let mensajeInicial = `
-    PIEDRA PAPEL O TIJERAS
-    ======================
 
-    1 <-- Piedra
-    2 <-- Papel
-    3 <-- Tijeras
-`
-
-//sólo me importa las elecciones 1,2 o 3, las otras opciones que de el usuario no importan
-// ponemos la condicion de jugar, pero pasamos el prompt a numero
-
-let eleccionUsuario = Number(prompt(mensajeInicial))
-
+    for(let i = 0; i < game.length; i++){
+        if(game[i].checked == true){
+            game = game[i].id
+            alert(game)
+            break
+        }
+    }
+    let eleccionUsuario = game
 
     if(!isNaN(eleccionUsuario)) {
         if (eleccionUsuario == 1) {
@@ -83,11 +73,9 @@ let eleccionUsuario = Number(prompt(mensajeInicial))
     }
 }
 
-alert(`
 Victorias: ${victorias}
 Empates: ${empate}
 Perdidas: ${perdidas}
-`)
 
 
 //funcion que genera un número aleatorio entre 1 y 3, es la eleccion de la maquina
